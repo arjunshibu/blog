@@ -367,6 +367,9 @@
   li {
     text-align: left;
   }
+  li::before {
+    content: "📝";
+  }
 }
 
 .archive-tags {

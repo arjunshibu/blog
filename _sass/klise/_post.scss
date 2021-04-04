@@ -53,12 +53,9 @@
 
     &::after {
       background: $light;
-      bottom: 1px;
-      content: " ";
-      height: 2px;
+      content: "|";
       position: absolute;
-      right: -20px;
-      width: 12px;
+      right: -12px;
     }
   }
 
@@ -112,6 +109,12 @@
     margin: 0;
     padding-top: $spacing-full - 15;
     padding-bottom: $spacing-full - 15;
+  }
+
+  ul {
+    li::before {
+      content: "✴️";
+    }
   }
 
   ul.task-list {

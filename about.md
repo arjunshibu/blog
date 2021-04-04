@@ -5,13 +5,12 @@ layout: page
 comments: false
 ---
 
-My name is Arjun Shibu, an infosec hobbyist and bug hunter from Kerala, India, living in Thodupuzha. This blog is for documentation about my infosec journey, web, mobile and open-source security, bug bounty, exploit development and ctf solutions. I love to learn new things every day related to security and development.
+My name is Arjun Shibu, an infosec hobbyist and bug hunter from Kerala, India, living in Thodupuzha. I love to learn new things every day related to security and development. This blog is for documentation about my infosec journey, web, mobile and open-source security, bug bounty, exploit development and ctf solutions.
 
 I'm currently looking for new opportunities, my inbox is always open. Whether you have any question or just wants to say hi, I'll try my best to get back to you!
 
-**get in touch ✨**
+**Ping me ✨**
+<br>
+<a href="mailto:{{ site.author.email }}" class="email-link">{{ site.author.email }}</a>
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
-
-Report [here](https://github.com/arjunshibu/blog/issues/new) if there is anything broken or something else.
+Report [here](https://github.com/arjunshibu/blog/issues/new) if there is something broken.

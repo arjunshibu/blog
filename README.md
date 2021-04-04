@@ -9,7 +9,7 @@ My Infosec Blog <a href="https://arjunshibu.tech" target="_blank" rel="noopener"
 
 ## Installation
 
-1. Fork or use [Klisé](https://github.com/piharpi/jekyll-klise) as the template for your blog
+1. Fork or use [Klisé](https://github.com/piharpi/jekyll-klise) as the template for your blog.
 2. Run locally
 
 ```bash
@@ -19,7 +19,7 @@ $ bundle install
 $ bundle exec jekyll serve
 ```
 
-3. Navigate to `localhost:4000`. You're Welcome, Fork and be a Stargazer.
+3. Navigate to `localhost:4000`. You're welcome, fork and be a stargazer.
 
 ## Issues
 
