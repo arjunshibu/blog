@@ -1,61 +1,40 @@
-# Klisé
+# Blog
 
-Klisé is minimalist Jekyll theme for running a personal site and blog running on Jekyll.<br>
-For demo <a href="https://klise.now.sh" target="_blank" rel="noopener">klise.now.sh</a>
+![APM](https://img.shields.io/apm/l/jekyll?style=flat-square)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5cc899ec-733c-4643-b875-dad81e53faa7/deploy-status)](https://app.netlify.com/sites/arjunshibu/deploys)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/0xsegf?style=flat-square&logo=twitter)](https://twitter.com/intent/follow?screen_name=0xsegf)
+![GitHub followers](https://img.shields.io/github/followers/arjunshibu?style=social)
 
-## Features
-
-- [x] Light & Dark Mode support :waxing_crescent_moon:
-- [x] Customizable (using `.scss`)
-- [x] Responsive (desktop, tab and mobile)
-- [x] Mobile First Design
-- [x] SEO Optimized
-- [x] Images of post Organized ([`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles))
-- [x] Generate Sitemap ([`jekyll-sitemap`](https://github.com/jekyll/jekyll-sitemap))
-- [x] RSS Feed ([`jekyll-feed`](https://github.com/jekyll/jekyll-feed))
-- [x] Syntax Highlighter ([`rouge`](https://github.com/rouge-ruby/rouge))
-- [x] Next & Previous Post
-- [x] Comment layout, enable in frontmatter if you wish
-- [x] Google analytics
-- [x] HTML Minify ([`jekyll-compress-html`](https://github.com/penibelst/jekyll-compress-html))
-- [x] W3C **Validated**
-- [x] Lighthouse and PageSpeed **Passed**
-
-![Lighthouse Result](./lighthouse.png)
-
-## Backlogs
-
-- [ ] Intergrated with PhotoSwipe.
-- [ ] Add schema.org meta information.
-- [ ] Transform class selector to BEM metodology.
+My Infosec Blog <a href="https://arjunshibu.tech" target="_blank" rel="noopener">arjunshibu.tech</a> made with Klisé Jekyll theme, hosted in Netlify.
 
 ## Installation
 
-Run local server:
+1. Fork or use [Klisé](https://github.com/piharpi/jekyll-klise) as the template for your blog
+2. Run locally
 
 ```bash
-$ git clone https://github.com/piharpi/jekyll-klise.git
-$ cd jekyll-klise
+$ git clone https://github.com/yourname/blog.git
+$ cd blog
 $ bundle install
 $ bundle exec jekyll serve
 ```
 
-Navigate to `localhost:4000`. You're Welcome, Fork and be Stargazer.
+3. Navigate to `localhost:4000`. You're Welcome, Fork and be a Stargazer.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piharpi/jekyll-klise) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/piharpi/jekyll-klise)
+## Issues
 
-## Limitation
-
-- Since [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles#compatibility) plugin isn't supported by github pages, this cause will make your site problems, path broken or post images won't show up, you can host alternatively using likes [netlify.com](https://netlify.com), [vercel.com](https://vercel.com) or [surge.sh](https://surge.sh) services, which support 3rd party.
+Since github pages doesn't support [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles#compatibility) plugin, it may cause minor problems. You can alternatively host on [netlify.com](https://netlify.com), [vercel.com](https://vercel.com) or [surge.sh](https://surge.sh).
 
 ## Contributing
 
-If you see any typos or formatting errors in a post, or want to helping reduce backlogs or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!, please read [contributing](./CONTRIBUTING.md) before PR.
+If you see any typos or formatting errors in a post, or want to help reduce backlogs or any other issue that needs to be addressed, please do not hesitate to open a PR, please read [contributing guidelines](./CONTRIBUTING.md).
 
-Yeaaa feel free to open a pull request.
 ## Support
 
+Support [Mahendrata Harpi](https://github.com/piharpi) for this amazing theme.
+
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W7MJ4X) [![saweria.co](./assets/img/saweria-button.png)](https://saweria.co/piharpi)
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
