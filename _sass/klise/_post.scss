@@ -49,13 +49,12 @@
 
   time {
     position: relative;
-    margin-right: 1.5em;
+    margin-right: 9px;
 
     &::after {
       background: $light;
       content: "|";
       position: absolute;
-      right: -12px;
     }
   }
 
@@ -103,6 +102,10 @@
     &:focus {
       color: $text-link-blue;
     }
+  }
+
+  img {
+    display: block;
   }
 
   > p {
