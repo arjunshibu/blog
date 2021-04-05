@@ -20,7 +20,7 @@ Enough with that, let's jump into one of my recent disclosures in huntr which wa
 
 I usually choose JavaScript apps and packages as my targets. Github of course, grep.app and npmjs are my go-to resources for finding targets. For example if you want web apps built with **express.js**, search `require('express')` in github. Use filters to get recently active projects.
 
-I was reading code of all the Mailtrain's routes to identify available features. One of the route handler is `routes/reports.js` [source][vulnerable-source]{:target="_blank"}
+I was reading code of all the Mailtrain's routes to identify available features. One of the route handlers is `routes/reports.js` [source][vulnerable-source]{:target="_blank"}
 
 {% highlight javascript %}
 78    router.get('/create', passport.csrfProtection, (req, res) => {
