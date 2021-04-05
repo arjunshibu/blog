@@ -20,7 +20,7 @@ Enough with that, let's jump into one of my recent disclosures in huntr which wa
 
 I usually choose JavaScript apps and packages as my targets. Github of course, grep.app and npmjs are my go-to resources for finding targets. For example if you want web apps built with **express.js**, search `require('express')` in github. Use filters to get recently active projects.
 
-I was reading code of all the Mailtrain's routes to identify available features. One of the route handler is `routes/reports.js` [source][vulnerable source]{:target="_blank"}
+I was reading code of all the Mailtrain's routes to identify available features. One of the route handler is `routes/reports.js` [source][vulnerable-source]{:target="_blank"}
 
 {% highlight javascript %}
 78    router.get('/create', passport.csrfProtection, (req, res) => {
@@ -37,7 +37,7 @@ If you are little bit familiar with **express.js**, you would say that the line 
 
 But this simple line of code doesn't seems to be vulnerable to anything right?
 
-![morpheus-meme]{:width="60%"}
+![morpheus-meme](morpheus.jpg){:width="60%"}
 
 When I saw this, one of the write-ups I read few months ago came into my mind. If you are interested in knowing about the root cause of the issue, read it [here][write-up]{:target="_blank"}.
 
@@ -48,7 +48,7 @@ If you read the source above, you can see that it uses `hbs`. At this moment, I 
 ![poc0](poc0.gif){:alt="PoC"}
 <figcaption>PoC 01</figcaption>
 
-![hehe-boi-meme]{:width="60%"}
+![hehe-boi-meme](hehe-boi.jpg){:width="60%"}
 
 Yeah! Directory traversal🔥. With that, reading local files was easy as...
 
@@ -62,7 +62,7 @@ I quickly disclosed this [issue][disclosure]{:target="_blank"} and also opened a
 
 Within few days, the maintainer of Mailtrain reviewed and accepted it. And I got the💰.
 
-![secured-meme]{:width="60%"}
+![secured-meme](secured.jpg){:width="60%"}
 
 I've also requested a CVE for this bug and waiting to hear back from the CNA.
 
@@ -75,11 +75,8 @@ That's all for now. Stay safe❤️.
 [CVE-2021-23329]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23329
 [Mailtrain]: https://mailtrain.org
 [Mailtrain-repo]: https://github.com/Mailtrain-org/mailtrain
-[vulnerable source]: https://github.com/Mailtrain-org/mailtrain/blob/1d34f4f14d02c2d5794e37d0431118e0e41e4e71/routes/reports.js#L78
+[vulnerable-source]: https://github.com/Mailtrain-org/mailtrain/blob/1d34f4f14d02c2d5794e37d0431118e0e41e4e71/routes/reports.js#L78
 [write-up]: https://blog.shoebpatel.com/2021/01/23/The-Secret-Parameter-LFR-and-Potential-RCE-in-NodeJS-Apps/
-[morpheus-meme]: http://www.quickmeme.com/img/bf/bf1ce4989235846db014a806d6365c51b22c3fa0db3312d92f066a9b7ce2f663.jpg
-[hehe-boi-meme]: https://miro.medium.com/max/942/1*SkF7PLLLQjPkGlGN_MNL4A.jpeg
-[secured-meme]: https://memegenerator.net/img/instances/73937255/we-did-it-the-organization-is-100-cyber-secure.jpg
 [disclosure]: https://huntr.dev/bounties/1-other-mailtrain/
 [fix]: https://github.com/Mailtrain-org/mailtrain/pull/1029
 [diff]: https://github.com/Mailtrain-org/mailtrain/pull/1029/files
