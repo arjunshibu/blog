@@ -14,11 +14,11 @@ Introducing [huntr.dev], a bug bounty board for securing open-source code, it he
 - [CVE-2021-23329]{:target="_blank"}
 - [CVE-2021-23327]{:target="_blank"}
 
-If you like reading code or wants to secure the open-source code (but for some $$$😅),<br>join [huntr][huntr.dev] now!
+If you like reading code or want to secure the open-source code (but for some $$$😅),<br>join [huntr][huntr.dev] now!
 
 Enough with that, let's jump into one of my recent disclosures in huntr which was a **Directory Traversal** vulnerability in the [repo][Mailtrain-repo] of the well known newsletter platform [Mailtrain].
 
-I usually choose JavaScript apps and packages as my targets. Github of course, grep.app and npmjs are my go-to resources for finding targets. For example if you want web apps built with **express.js**, search `require('express')` in github. Use filters to get recently active projects.
+I usually choose JavaScript/Node.js apps and packages as my targets (because I love JS😄, it's best to try to hunt in languages/frameworks that you love). Github of course, grep.app and npmjs are my go-to resources for finding targets. For example if you want web apps built with **express.js**, search `require('express')` in github. Use filters to get recently active projects.
 
 I was reading code of all the Mailtrain's routes to identify available features. One of the route handlers is `routes/reports.js` [source][vulnerable-source]{:target="_blank"}
 
@@ -39,11 +39,11 @@ But this simple line of code doesn't seems to be vulnerable to anything right?
 
 ![morpheus-meme](morpheus.jpg){:width="60%"}
 
-When I saw this, one of the write-ups I read few months ago came into my mind. If you are interested in knowing about the root cause of the issue, read it [here][write-up]{:target="_blank"}.
+When I saw this, one of the write-ups I read few months ago came into my mind. If you are interested in knowing about the root cause of the issue, read it [here][write-up]{:target="_blank"} (you'll be amazed to see how a simple feature can be turned into a critical vulnerability if misused).
 
 **TL;DR**: If an express server is using `hbs` as view engine for server-side rendering and it allowes user-constructed query string parameters without validation to get passed to express's `render()` function, an attacker can use parameter called `layout` to read arbitrary files in the web server.
 
-If you read the source above, you can see that it uses `hbs`. At this moment, I was sure it is vulnerable. To test it, I setup Mailtrain locally. Since acces to this route requires authentication, the default creds from the repo can be used. With a little curiosity, I gave the `layout` parameter and got what I expected.
+If you read the source above, you can see that it uses `hbs`. At this moment, I was sure it is vulnerable. To test it, I setup Mailtrain locally. Since access to this route requires authentication, the default creds from the repo can be used. With a little curiosity, I gave the `layout` parameter and got what I expected.
 
 ![poc0](poc0.gif){:alt="PoC"}
 <figcaption>PoC 01</figcaption>
