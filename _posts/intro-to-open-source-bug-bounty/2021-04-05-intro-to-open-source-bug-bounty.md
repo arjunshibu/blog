@@ -14,7 +14,7 @@ Introducing [huntr.dev], a bug bounty board for securing open-source code, it he
 - [CVE-2021-23329]{:target="_blank"}
 - [CVE-2021-23327]{:target="_blank"}
 
-If you like reading code or want to secure the open-source code (but for some $$$😅),<br>join [huntr][huntr.dev] now!
+If you like reading code or want to secure the open-source code (but for some $$$😅), join [huntr][huntr.dev] now!
 
 Enough with that, let's jump into one of my recent disclosures in huntr which was a **Directory Traversal** vulnerability in the [repo][Mailtrain-repo] of the well known newsletter platform [Mailtrain].
 
