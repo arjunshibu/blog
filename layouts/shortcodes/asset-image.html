@@ -1,0 +1,5 @@
+
+{{- $image := resources.Get (.Get "src") -}}
+{{- if $image -}}
+<img src="{{ $image.RelPermalink }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ with .Get "width" }} width="{{ . | plainify }}" {{ end }} {{ with .Get "height" }} height="{{ . | plainify }}" {{ end }} />
+{{- end -}}

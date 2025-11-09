@@ -1,0 +1,41 @@
+{{ define "main" }}
+  <div class="terms">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="index-content">
+        {{ . }}
+      </div>
+    {{ end }}
+    {{ $type := .Type }}
+    {{ $terms := .Data.Terms }}
+    {{ if $terms }}
+      <ul>
+        {{ range $key, $value := $terms.Alphabetical }}
+          {{ $name := .Name }}
+          {{ $count := .Count }}
+          {{ $urlized := $name | urlize }}
+          {{ with $.Site.GetPage (printf "/%s/%s" $type $urlized) }}
+            <li>
+              <a class="terms-title" href="{{ .Permalink }}">{{ $name }} [{{ $count }}]</a>
+            </li>
+          {{ else }}
+            <li>
+              <a class="terms-title" href="{{ (printf "/%s/%s/" $type $urlized) | absLangURL }}">{{ $name }} [{{ $count }}]</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ else if index $.Site.Taxonomies $type }}
+      <ul>
+        {{ range $key, $value := index $.Site.Taxonomies $type }}
+          <li>
+            <a class="terms-title" href="{{ (printf "/%s/%s/" $type ($key | urlize)) | absLangURL }}">{{ $key }} [{{ len $value }}]</a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p>No tags yet.</p>
+    {{ end }}
+  </div>
+{{ end }}
+
